@@ -9,9 +9,9 @@
 <body>
 
     <form action="Calculator.php" method="post" />
-    first Num: <input type="number" name="num1" /> <br>
+    first Num: <input type="number" step="0.001" name="num1" /> <br>
     OP: <input type="text" name="op" /> <br>
-    second Num: <input type="number" name="num2" /> <br>
+    second Num: <input type="number" step="0.001" name="num2" /> <br>
     <input type="submit" />
 
     </form>
@@ -20,7 +20,7 @@
     $num2 = $_POST["num2"];
     $op = $_POST["op"];
 
-    
+
     function calc($num1, $num2, $op){
         if($op == "+"){
             echo $num1 + $num2;
